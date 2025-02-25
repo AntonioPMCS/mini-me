@@ -1,7 +1,5 @@
-import { useState, useCallback, useEffect, useContext } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import './App.css'
-import { createClientUPProvider } from '@lukso/up-provider';
-import { Address } from './types/Address';
 import UpProviderContext from './context/UpProviderContext';
 
 // Import the LUKSO web-components library
@@ -9,8 +7,6 @@ let promise: Promise<unknown> | null = null;
 if (typeof window !== "undefined") {
   promise = import("@lukso/web-components");
 }
-
-const provider = createClientUPProvider();
 
 function App() {
   // Track connected accounts
