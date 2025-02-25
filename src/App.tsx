@@ -29,6 +29,9 @@ function App() {
     });
   }, []);
 
+  if (!mounted) {
+    return null; // or a loading placeholder
+  }
 
   return (
     <>
