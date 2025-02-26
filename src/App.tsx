@@ -13,7 +13,8 @@ function App() {
   const {
     accounts, 
     contextAccounts, 
-    walletConnected
+    walletConnected,
+    chainId
   } = useContext(UpProviderContext)
 
   const [mounted, setMounted] = useState(false);
@@ -32,7 +33,10 @@ function App() {
   return (
     <>
       <h2>
-        Grid Host: {contextAccounts[0]}
+        chainId: {chainId}
+      </h2>
+      <h2>
+        Grid Host (Context account): {contextAccounts[0]}
       </h2>
       <h2>
         Connected Profile: {walletConnected? 'True' : 'False'} - {accounts[0]}
