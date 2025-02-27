@@ -23,6 +23,12 @@ function App() {
       <h2>
         Context Address (Grid host): {contextAccounts[0]}
       </h2>
+      <h2>
+        Wallet Connected: {walletConnected}
+      </h2>
+      <h2>
+        Connected account: {accounts[0]}
+      </h2>
     </div>
   )
 }
