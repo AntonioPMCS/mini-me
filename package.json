@@ -13,6 +13,7 @@
     "@lukso/up-provider": "^0.3.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-textarea-autosize": "^8.5.7",
     "viem": "^2.23.5"
   },
   "devDependencies": {

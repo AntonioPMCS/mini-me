@@ -1,6 +1,7 @@
 import './App.css'
 import { useContext } from 'react'
 import UpProviderContext from './context/UpProviderContext'
+import Chat from './components/Chat'
 
 function App() {
    // Track connected accounts
@@ -24,11 +25,12 @@ function App() {
         Context Address (Grid host): {contextAccounts[0]}
       </h2>
       <h2>
-        Wallet Connected: {walletConnected}
+        Wallet Connected: {walletConnected ? 'true' : false}
       </h2>
       <h2>
         Connected account: {accounts[0]}
       </h2>
+      <Chat />
     </div>
   )
 }
