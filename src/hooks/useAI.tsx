@@ -1,10 +1,10 @@
 import { useState } from "react"
 import MessageType from "../types/MessageType";
 
-const useAI = (apiKey:string, prevMessages:MessageType[]) => {
+const useAI = (prevMessages:MessageType[]) => {
   const [data, setData] = useState<string>("");
 
-  const sendRequest = async (prompt:string, model = "gpt-4o-mini-2024-07-18") => {
+  const sendRequest = async (prompt:string, apiKey:string, model = "gpt-4o-mini-2024-07-18") => {
     const messages = [
       ...prevMessages.map(msg => ({ role: msg.generated ? 'assistant' : 'user', content: msg.content })), // Ensure correct structure
       { role: "user", content: prompt } // Add new user message
