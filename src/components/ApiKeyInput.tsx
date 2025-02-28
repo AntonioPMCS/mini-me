@@ -1,6 +1,7 @@
 import { useContext, useState } from 'react'
 import AuthContext from '../context/AuthContext'
 import "../styles/Auth.css"
+import { truncateMiddle } from '../utils/string'
 
 const ApiKeyInput = () => {
   const { apiKey, addApiKey } = useContext(AuthContext);
@@ -12,15 +13,9 @@ const ApiKeyInput = () => {
     setInputValue("");
   }
 
-  const truncateMiddle = (text: string, startLength = 6, endLength = 6) => {
-    if (text.length <= startLength + endLength) return text; // Don't truncate if not needed
-    return `${text.slice(0, startLength)}...${text.slice(-endLength)}`;
-  };
-  
-
   return (
     <>
-      <h4>Api Key: {truncateMiddle(apiKey)} </h4>
+      <span>Api Key: {truncateMiddle(apiKey)}</span>
       <div className="key-input">
         <form onSubmit={handleSubmit} className="key-input">
           <label>OpenAI API Key: </label>
