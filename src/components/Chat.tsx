@@ -51,7 +51,6 @@ const Chat = () => {
   return (
     <div >
       <ApiKeyInput />
-      <h4>Api Key: {apiKey} </h4>
       <div className="chat-container">
         <ChatWindow msgs = {messages}/>
       </div>
