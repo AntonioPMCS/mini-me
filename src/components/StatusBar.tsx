@@ -18,7 +18,7 @@ const StatusBar = ({}) => {
       {walletConnected ? 
               <div>
                 <CheckCircle size={14} color="green" style={{ marginRight: "6px" }}/>
-                {truncateMiddle(accounts[0])} @ {chainId === 42 ? 'LUKSO Mainnet' : 'LUKSO Testnet'}
+                {truncateMiddle(accounts[0])} @@@ {chainId === 42 ? 'LUKSO Mainnet' : 'LUKSO Testnet'}
               </div> 
               :
               <div>
