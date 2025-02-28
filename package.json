@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "commit": "git add * && git commit -m \"$1\" && git push"
+    "commit": "git add . && git commit -m \"$*\" && git push"
   },
   "dependencies": {
     "@lukso/up-provider": "^0.3.5",
